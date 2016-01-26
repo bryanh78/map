@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="main">
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+	<link rel="stylesheet" type="text/css" href="map.css">
+ <script type="text/javascript" src="map.js"></script>
+</head>
+<body ng-controller="first">
+	<div >
+		<img id="marker" ng-click="clickMarker()" ng-hide="hideMarker" style="top:{{y-23}}px; left:{{x-10}}px" src="http://simpleicon.com/wp-content/uploads/map-marker-2.png">
+		<img id="map" ng-click="showCoords($event)" src="https://raw.githubusercontent.com/RefactorU/exercise-starters/master/client-js/gold-rush/topo-co.jpg">
+
+	</div>
+
+
+</body>
+</html>
