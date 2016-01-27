@@ -8,8 +8,14 @@
 </head>
 <body ng-controller="first">
 	<div >
-		<img id="marker" ng-click="clickMarker()" ng-hide="hideMarker" style="top:{{y-23}}px; left:{{x-10}}px" src="http://simpleicon.com/wp-content/uploads/map-marker-2.png">
 		<img id="map" ng-click="showCoords($event)" src="https://raw.githubusercontent.com/RefactorU/exercise-starters/master/client-js/gold-rush/topo-co.jpg">
+			<div ng-repeat="markers in repeatArray" >
+				<img  id="marker" style="top:{{markers.y-22}}px; left:{{markers.x-10}}px" ng-hide="hideMarker" ng-click="hideMarker=true" src="http://simpleicon.com/wp-content/uploads/map-marker-2.png">
+				
+				<input type="text" id="textbox" style="top:{{markers.y}}px; left:{{markers.x-10}}px">
+				<input id="textbox" ng-click="store()" ng-model="info"style="top:{{markers.y+20}}px; left:{{markers.x-10}}px" type="submit" value="submit">
+			</div>
+		
 
 	</div>
 
