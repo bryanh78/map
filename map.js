@@ -8,14 +8,16 @@ angular.module("main")
 			$scope.showCoords = function(event) {
  
     			$scope.coords = {
-    				x : event.clientX,
-    				y : event.clientY
+    				x : event.pageX,
+    				y : event.pageY
     			}
     			
     			$scope.repeatArray.push($scope.coords)
-    			
-			};
-
+    						};
+console.log($scope.repeatArray)
+            $scope.submit=function() {
+                $scope.store=true;
+            }
 
 	}])
  
